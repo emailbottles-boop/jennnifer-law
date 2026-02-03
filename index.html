@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Natural Origins</title>
+  <title>Jennifer Stewart Law</title>
 
   <style>
     :root {
-      --blue-dark: #0a1f33;
-      --blue-main: #0f4c81;
-      --blue-soft: #5fa8d3;
-      --bg: #f4f9fc;
+      --navy-dark: #0b1c2d;
+      --navy-main: #132f4c;
+      --navy-soft: #3f6c8f;
+      --gold: #c8a44a;
+      --bg: #f5f7fa;
       --card: #ffffff;
-      --text: #0a1f33;
+      --text: #0b1c2d;
     }
 
     * {
@@ -24,33 +25,43 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     header {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue-main));
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy-main));
       color: white;
-      padding: 4rem 1.5rem;
+      padding: 5rem 1.5rem 4rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      margin-bottom: 0.5rem;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 0.6rem;
       letter-spacing: 0.08em;
     }
 
     header p {
+      font-size: 1rem;
+      opacity: 0.9;
       max-width: 600px;
       margin: 0 auto;
-      opacity: 0.9;
+    }
+
+    header .motto {
+      margin-top: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--gold);
+      text-transform: uppercase;
     }
 
     nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
       flex-wrap: wrap;
     }
 
@@ -58,8 +69,8 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      letter-spacing: 0.15em;
-      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      font-size: 0.7rem;
       opacity: 0.85;
     }
 
@@ -69,86 +80,96 @@
     }
 
     section {
-      padding: 4rem 1.5rem;
+      padding: 4.5rem 1.5rem;
       max-width: 1100px;
       margin: 0 auto;
     }
 
     section h2 {
       text-align: center;
-      margin-bottom: 2.5rem;
-      font-size: 1.8rem;
-      color: var(--blue-main);
-      letter-spacing: 0.15em;
+      margin-bottom: 3rem;
+      font-size: 1.7rem;
+      letter-spacing: 0.2em;
+      color: var(--navy-main);
     }
 
-    /* BLOG */
-    .blog-grid {
+    /* PRACTICE AREAS */
+    .practice-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
     }
 
-    .blog-card {
+    .practice-card {
       background: var(--card);
-      border-radius: 16px;
-      padding: 1.8rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
     }
 
-    .blog-card h3 {
+    .practice-card h3 {
       margin-top: 0;
-      color: var(--blue-dark);
+      color: var(--navy-dark);
     }
 
-    .blog-card p {
+    .practice-card p {
       font-size: 0.95rem;
       opacity: 0.85;
     }
 
-    /* GALLERY */
-    .gallery {
+    /* ABOUT */
+    .about {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      align-items: center;
     }
 
-    .gallery img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-      transition: transform 0.25s ease;
+    .about p {
+      font-size: 1rem;
+      opacity: 0.9;
     }
 
-    .gallery img:hover {
-      transform: scale(1.04);
-    }
-
-    /* STORE */
-    .store {
+    /* CONTACT */
+    .contact {
       text-align: center;
-      background: linear-gradient(135deg, #eaf4fb, #d6ebf7);
-      border-radius: 22px;
-      padding: 3.5rem 2rem;
+      background: linear-gradient(135deg, #eef2f7, #e4ebf3);
+      border-radius: 26px;
+      padding: 4rem 2rem;
     }
 
-    .store h3 {
+    .contact h3 {
       margin-bottom: 1rem;
-      color: var(--blue-dark);
+      color: var(--navy-dark);
     }
 
-    .store p {
-      max-width: 500px;
+    .contact p {
+      max-width: 520px;
       margin: 0 auto;
-      opacity: 0.8;
+      opacity: 0.85;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.9rem 2rem;
+      border-radius: 999px;
+      background: var(--navy-main);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+    }
+
+    .contact a:hover {
+      background: var(--navy-dark);
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       opacity: 0.6;
     }
   </style>
@@ -157,63 +178,71 @@
 <body>
 
 <header>
-  <h1>NATURAL ORIGINS</h1>
-  <p>Plants, growth, and living things — documented naturally.</p>
+  <h1>JENNIFER STEWART LAW</h1>
+  <p>Dedicated legal representation focused on fairness, integrity, and results.</p>
+  <div class="motto">Public Defence You Can Trust</div>
 
   <nav>
-    <a href="#blog">BLOG</a>
-    <a href="#plants">PLANTS</a>
-    <a href="#store">STORE</a>
+    <a href="#practice">PRACTICE</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
   </nav>
 </header>
 
-<section id="blog">
-  <h2>BLOG</h2>
+<section id="practice">
+  <h2>PRACTICE AREAS</h2>
 
-  <div class="blog-grid">
-    <div class="blog-card">
-      <h3>First Growth</h3>
-      <p>A short entry about where Natural Origins begins and what you're growing.</p>
+  <div class="practice-grid">
+    <div class="practice-card">
+      <h3>Criminal Defense</h3>
+      <p>Strong, strategic defense for clients facing misdemeanor and felony charges.</p>
     </div>
 
-    <div class="blog-card">
-      <h3>Plant Notes</h3>
-      <p>Care tips, experiments, and observations as your plants evolve.</p>
+    <div class="practice-card">
+      <h3>Public Defense</h3>
+      <p>Committed advocacy ensuring every client receives fair and constitutional representation.</p>
     </div>
 
-    <div class="blog-card">
-      <h3>Seasonal Changes</h3>
-      <p>Tracking light, water, and environment across seasons.</p>
+    <div class="practice-card">
+      <h3>Legal Consultation</h3>
+      <p>Clear guidance, honest assessments, and practical legal advice.</p>
     </div>
   </div>
 </section>
 
-<section id="plants">
-  <h2>PLANTS</h2>
+<section id="about">
+  <h2>ABOUT</h2>
 
-  <div class="gallery">
-    <!-- Replace these with your real plant images -->
-    <img src="https://via.placeholder.com/600x400?text=Plant+1" alt="Plant 1">
-    <img src="https://via.placeholder.com/600x400?text=Plant+2" alt="Plant 2">
-    <img src="https://via.placeholder.com/600x400?text=Plant+3" alt="Plant 3">
-    <img src="https://via.placeholder.com/600x400?text=Plant+4" alt="Plant 4">
-  </div>
-</section>
-
-<section id="store">
-  <h2>STORE</h2>
-
-  <div class="store">
-    <h3>Coming Soon</h3>
+  <div class="about">
     <p>
-      Seeds, plants, and natural goods will be available here soon.
-      Built slowly. Built right.
+      Jennifer Stewart is a dedicated public defense attorney committed to protecting the
+      rights of individuals and ensuring justice is accessible to all. Her practice is built
+      on trust, preparation, and unwavering advocacy.
+    </p>
+
+    <p>
+      Every case is approached with care, discretion, and a deep respect for the law.
+      Clients can expect professionalism, transparency, and a defense they can rely on.
     </p>
   </div>
 </section>
 
+<section id="contact">
+  <h2>CONTACT</h2>
+
+  <div class="contact">
+    <h3>Schedule a Consultation</h3>
+    <p>
+      Reach out to discuss your case and understand your options.
+      Confidential and judgment-free.
+    </p>
+
+    <a href="mailto:contact@jenniferstewartlaw.com">GET IN TOUCH</a>
+  </div>
+</section>
+
 <footer>
-  © 2026 Natural Origins
+  © 2026 Jennifer Stewart Law — All Rights Reserved
 </footer>
 
 </body>
