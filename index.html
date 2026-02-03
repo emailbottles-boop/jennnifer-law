@@ -1,260 +1,252 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jennifer Stewart Law</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Stewart Law</title>
 
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --navy-dark: #0b1c2d;
-      --navy-main: #132f4c;
-      --gold: #c8a44a;
-      --bg: #f5f7fa;
-      --card: #ffffff;
-      --text-main: #1a2633;
-      --text-soft: #4a5b6b;
-    }
+<style>
+:root{
+  --navy:#132f4c;
+  --navy-dark:#0b1c2d;
+  --gold:#c8a44a;
+  --bg:#f5f7fa;
+  --card:#ffffff;
+  --text:#1a2633;
+  --soft:#4b5d73;
+}
 
-    * { box-sizing: border-box; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-      line-height: 1.75;
-      font-size: 16px;
-    }
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  font-size:18px;
+  line-height:1.75;
+}
 
-    /* ===== HEADER ===== */
-    header {
-      background:
-        linear-gradient(rgba(11,28,45,0.9), rgba(11,28,45,0.9)),
-        url("legalbooks.jpeg") center / cover no-repeat;
-      color: white;
-      padding: 6rem 1.5rem 5rem;
-      text-align: center;
-    }
+/* ===== HEADER ===== */
+header{
+  background:
+    linear-gradient(rgba(11,28,45,.88),rgba(11,28,45,.88)),
+    url("legalbooks.jpeg") center/cover no-repeat;
+  color:white;
+  text-align:center;
+  padding:5.5rem 1.5rem 5rem;
+}
 
-    header h1 {
-      font-size: clamp(2.5rem, 5vw, 3.4rem);
-      letter-spacing: 0.04em;
-      margin-bottom: 0.8rem;
-      font-weight: 700;
-    }
+header h1{
+  font-size:4.6rem;
+  letter-spacing:.08em;
+  margin:0 0 .8rem;
+}
 
-    header p {
-      max-width: 680px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      opacity: 0.95;
-    }
+header p{
+  font-size:1.3rem;
+  max-width:820px;
+  margin:0 auto;
+}
 
-    .motto {
-      margin-top: 1.8rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      font-size: 0.75rem;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
+.motto{
+  margin-top:1.8rem;
+  font-size:1.15rem;
+  letter-spacing:.18em;
+  color:var(--gold);
+  font-weight:600;
+  white-space:nowrap;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.8rem;
-      margin-top: 3.2rem;
-      flex-wrap: wrap;
-    }
+/* ===== NAV ===== */
+nav{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:2.2rem;
+  margin-top:3.5rem;
+  flex-wrap:wrap;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      font-size: 0.7rem;
-      opacity: 0.85;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:.15em;
+  font-size:.9rem;
+}
 
-    nav a:hover { opacity: 1; }
+.resources-btn{
+  background:var(--gold);
+  color:var(--navy-dark);
+  padding:.75rem 2rem;
+  border-radius:999px;
+}
 
-    .resources-btn {
-      background: var(--gold);
-      color: var(--navy-dark);
-      padding: 0.6rem 1.4rem;
-      border-radius: 999px;
-      font-weight: 700;
-    }
+/* ===== SECTIONS ===== */
+section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:6rem 1.5rem;
+}
 
-    /* ===== SECTIONS ===== */
-    section {
-      padding: 5rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+section h2{
+  text-align:center;
+  font-size:2.5rem;
+  letter-spacing:.18em;
+  margin-bottom:1.2rem;
+  color:var(--navy);
+}
 
-    section h2 {
-      text-align: center;
-      font-size: 1.65rem;
-      letter-spacing: 0.16em;
-      font-weight: 700;
-      color: var(--navy-main);
-      margin-bottom: 0.8rem;
-    }
+.section-sub{
+  text-align:center;
+  font-size:1.3rem;
+  color:var(--soft);
+  max-width:900px;
+  margin:0 auto 4.2rem;
+}
 
-    .section-subtext {
-      text-align: center;
-      max-width: 620px;
-      margin: 0 auto 3.5rem;
-      font-size: 0.95rem;
-      color: var(--text-soft);
-    }
+/* ===== PRACTICE ===== */
+.practice-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:3rem;
+}
 
-    /* ===== PRACTICE ===== */
-    .practice-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
+.practice-card{
+  background:var(--card);
+  padding:3.5rem 3rem;
+  border-radius:28px;
+  text-align:center;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
 
-    .practice-card {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 2.8rem 2.2rem;
-      box-shadow: 0 16px 38px rgba(0,0,0,0.07);
-      text-align: center;
-    }
+.practice-card h3{
+  font-size:1.45rem;
+  margin-bottom:1rem;
+}
 
-    .practice-card h3 {
-      margin: 0;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--navy-dark);
-    }
+.practice-card p{
+  font-size:1.25rem;
+  color:var(--soft);
+}
 
-    .practice-card p {
-      margin-top: 0.8rem;
-      font-size: 0.95rem;
-      color: var(--text-soft);
-    }
+/* ===== ABOUT ===== */
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:3rem;
+}
 
-    /* ===== ABOUT ===== */
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.6rem;
-    }
+.about-card{
+  background:var(--card);
+  padding:3.5rem;
+  border-radius:28px;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  text-align:center;
+}
 
-    .about-card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 2.8rem;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.07);
-      text-align: center;
-      font-size: 1rem;
-      color: var(--text-soft);
-    }
+.about-card h3{
+  font-size:1.45rem;
+  margin-bottom:1rem;
+}
 
-    /* ===== RESOURCES ===== */
-    .resources-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
+.about-card p{
+  font-size:1.3rem;
+  color:var(--soft);
+}
 
-    .resource-card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 2.8rem;
-      text-align: center;
-      box-shadow: 0 16px 38px rgba(0,0,0,0.07);
-    }
+/* ===== RESOURCES ===== */
+#resources{
+  background:#eef2f7;
+}
 
-    .resource-card h3 {
-      margin-top: 0;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--navy-dark);
-    }
+.resources-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:3rem;
+}
 
-    .resource-card p {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-      margin-top: 0.6rem;
-    }
+.resource-card{
+  background:white;
+  padding:3.2rem;
+  border-radius:28px;
+  text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
 
-    .resource-card a {
-      display: inline-block;
-      margin-top: 1.4rem;
-      padding: 0.8rem 1.7rem;
-      border-radius: 999px;
-      background: var(--navy-main);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-decoration: none;
-    }
+.resource-card p{
+  font-size:1.25rem;
+  color:var(--soft);
+}
 
-    /* ===== CONTACT ===== */
-    .contact {
-      text-align: center;
-      background: linear-gradient(135deg, #eef2f7, #e4ebf3);
-      border-radius: 26px;
-      padding: 4.5rem 2rem;
-    }
+.resource-card a{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:2rem;
+  padding:.9rem 2.4rem;
+  border-radius:999px;
+  background:var(--navy);
+  color:white;
+  text-decoration:none;
+  font-size:.9rem;
+  letter-spacing:.15em;
+  font-weight:600;
+}
 
-    form {
-      max-width: 520px;
-      margin: 2.5rem auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1.1rem;
-    }
+/* ===== CONTACT ===== */
+.contact-box{
+  background:#e4ebf3;
+  padding:4.8rem 2.5rem;
+  border-radius:32px;
+  text-align:center;
+}
 
-    input, textarea {
-      padding: 1rem 1.1rem;
-      border-radius: 12px;
-      border: 1px solid #ccd6e0;
-      font-family: inherit;
-      font-size: 0.95rem;
-    }
+form{
+  max-width:560px;
+  margin:3rem auto 0;
+  display:flex;
+  flex-direction:column;
+  gap:1.4rem;
+}
 
-    button {
-      margin-top: 1.4rem;
-      padding: 1rem 2.6rem;
-      border-radius: 999px;
-      border: none;
-      background: var(--navy-main);
-      color: white;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      font-size: 0.75rem;
-      cursor: pointer;
-    }
+input,textarea{
+  padding:1.1rem;
+  border-radius:14px;
+  border:1px solid #ccd6e0;
+  font-size:1rem;
+}
 
-    footer {
-      text-align: center;
-      padding: 2.2rem 1rem;
-      font-size: 0.75rem;
-      opacity: 0.6;
-    }
-  </style>
+button{
+  margin-top:1.5rem;
+  padding:1.1rem 3rem;
+  border:none;
+  border-radius:999px;
+  background:var(--navy);
+  color:white;
+  font-weight:600;
+  letter-spacing:.15em;
+}
+
+footer{
+  text-align:center;
+  padding:2.5rem 1rem;
+  font-size:.9rem;
+  opacity:.65;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>JENNIFER STEWART LAW</h1>
-  <p>Dedicated legal representation focused on fairness, integrity, and results.</p>
-  <div class="motto">Public Defence You Can Trust</div>
+  <p>Dedicated public defense representation grounded in fairness, dignity, and results.</p>
+  <div class="motto">Public Defense You Can Trust</div>
 
   <nav>
     <a href="#practice">PRACTICE</a>
@@ -266,52 +258,47 @@
 
 <section id="practice">
   <h2>PRACTICE AREAS</h2>
-  <p class="section-subtext">
-    Focused legal services delivered with clarity, discretion, and care.
-  </p>
+  <p class="section-sub">Focused advocacy for individuals and families.</p>
 
   <div class="practice-grid">
     <div class="practice-card">
       <h3>Criminal Defense</h3>
-      <p>Strong advocacy for misdemeanor and felony cases.</p>
+      <p>Ethical, thorough defense at every stage.</p>
     </div>
-
     <div class="practice-card">
       <h3>Public Defense</h3>
-      <p>Protecting constitutional rights and due process.</p>
+      <p>Committed representation when it matters most.</p>
     </div>
-
     <div class="practice-card">
-      <h3>Legal Consultation</h3>
-      <p>Clear guidance to help you understand your options.</p>
+      <h3>Client Advocacy</h3>
+      <p>Respectful guidance and communication.</p>
     </div>
   </div>
 </section>
 
 <section id="about">
   <h2>ABOUT</h2>
-  <p class="section-subtext">
-    Professional, prepared, and committed to justice.
-  </p>
+  <p class="section-sub">Experience rooted in compassion and integrity.</p>
 
   <div class="about-grid">
     <div class="about-card">
-      Jennifer Stewart is a public defense attorney dedicated to protecting
-      individual rights and ensuring justice remains accessible to all.
+      <h3>Experience</h3>
+      <p>Years of courtroom and public defense work.</p>
     </div>
-
     <div class="about-card">
-      Every case is approached with preparation, discretion, and respect
-      for the law and the people it serves.
+      <h3>Approach</h3>
+      <p>Prepared, transparent, client-centered advocacy.</p>
+    </div>
+    <div class="about-card">
+      <h3>Commitment</h3>
+      <p>Justice, dignity, and fairness for every client.</p>
     </div>
   </div>
 </section>
 
 <section id="resources">
   <h2>COMMUNITY RESOURCES</h2>
-  <p class="section-subtext">
-    Trusted organizations offering assistance and support.
-  </p>
+  <p class="section-sub">Support beyond the courtroom.</p>
 
   <div class="resources-grid">
     <div class="resource-card">
@@ -328,7 +315,7 @@
 
     <div class="resource-card">
       <h3>WA LawHelp</h3>
-      <p>Free legal information and self-help tools.</p>
+      <p>Free legal information and self-help resources.</p>
       <a href="https://www.washingtonlawhelp.org" target="_blank">GET HELP</a>
     </div>
 
@@ -337,16 +324,36 @@
       <p>24-hour crisis and support line.</p>
       <a href="https://www.crisisconnections.org" target="_blank">CALL SUPPORT</a>
     </div>
+
+    <div class="resource-card">
+      <h3>Food Banks</h3>
+      <p>Free food assistance nationwide.</p>
+      <a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Free Meditation</h3>
+      <p>Guided mindfulness and stress relief.</p>
+      <a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Housing Help</h3>
+      <p>Emergency and transitional housing.</p>
+      <a href="https://www.hud.gov/findshelter" target="_blank">GET HOUSING</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Mental Health (988)</h3>
+      <p>24/7 mental health crisis support.</p>
+      <a href="https://988lifeline.org" target="_blank">CALL 988</a>
+    </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>CONTACT</h2>
-  <p class="section-subtext">
-    Confidential, respectful, and judgment-free communication.
-  </p>
-
-  <div class="contact">
+  <div class="contact-box">
     <form action="https://formspree.io/f/mnjzwvzl" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
@@ -357,8 +364,10 @@
 </section>
 
 <footer>
-  © 2026 Jennifer Stewart Law — All Rights Reserved
+© 2026 Jennifer Stewart Law — All Rights Reserved
 </footer>
 
 </body>
 </html>
+
+
