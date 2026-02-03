@@ -28,6 +28,7 @@
       line-height: 1.65;
     }
 
+    /* ===== HEADER ===== */
     header {
       background: linear-gradient(135deg, var(--navy-dark), var(--navy-main));
       color: white;
@@ -42,13 +43,12 @@
     }
 
     header p {
-      font-size: 1rem;
-      opacity: 0.9;
       max-width: 600px;
       margin: 0 auto;
+      opacity: 0.9;
     }
 
-    header .motto {
+    .motto {
       margin-top: 1.5rem;
       font-weight: 600;
       letter-spacing: 0.18em;
@@ -79,6 +79,7 @@
       text-decoration: underline;
     }
 
+    /* ===== SECTIONS ===== */
     section {
       padding: 4.5rem 1.5rem;
       max-width: 1100px;
@@ -93,7 +94,7 @@
       color: var(--navy-main);
     }
 
-    /* PRACTICE AREAS */
+    /* ===== PRACTICE AREAS ===== */
     .practice-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -117,20 +118,18 @@
       opacity: 0.85;
     }
 
-    /* ABOUT */
+    /* ===== ABOUT ===== */
     .about {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 3rem;
-      align-items: center;
     }
 
     .about p {
-      font-size: 1rem;
       opacity: 0.9;
     }
 
-    /* CONTACT */
+    /* ===== CONTACT ===== */
     .contact {
       text-align: center;
       background: linear-gradient(135deg, #eef2f7, #e4ebf3);
@@ -138,32 +137,48 @@
       padding: 4rem 2rem;
     }
 
-    .contact h3 {
-      margin-bottom: 1rem;
-      color: var(--navy-dark);
+    form {
+      max-width: 500px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    .contact p {
-      max-width: 520px;
-      margin: 0 auto;
-      opacity: 0.85;
+    input, textarea {
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid #ccd6e0;
+      font-family: inherit;
+      font-size: 0.9rem;
     }
 
-    .contact a {
-      display: inline-block;
-      margin-top: 2rem;
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 1rem;
       padding: 0.9rem 2rem;
       border-radius: 999px;
+      border: none;
       background: var(--navy-main);
       color: white;
-      text-decoration: none;
       font-weight: 600;
       letter-spacing: 0.15em;
       font-size: 0.75rem;
+      cursor: pointer;
     }
 
-    .contact a:hover {
+    button:hover {
       background: var(--navy-dark);
+    }
+
+    .disclaimer {
+      font-size: 0.7rem;
+      opacity: 0.6;
+      margin-top: 1rem;
     }
 
     footer {
@@ -195,17 +210,17 @@
   <div class="practice-grid">
     <div class="practice-card">
       <h3>Criminal Defense</h3>
-      <p>Strong, strategic defense for clients facing misdemeanor and felony charges.</p>
+      <p>Strategic defense for misdemeanor and felony charges.</p>
     </div>
 
     <div class="practice-card">
       <h3>Public Defense</h3>
-      <p>Committed advocacy ensuring every client receives fair and constitutional representation.</p>
+      <p>Ensuring constitutional rights and fair representation for every client.</p>
     </div>
 
     <div class="practice-card">
       <h3>Legal Consultation</h3>
-      <p>Clear guidance, honest assessments, and practical legal advice.</p>
+      <p>Clear, honest guidance to help you understand your options.</p>
     </div>
   </div>
 </section>
@@ -215,14 +230,13 @@
 
   <div class="about">
     <p>
-      Jennifer Stewart is a dedicated public defense attorney committed to protecting the
-      rights of individuals and ensuring justice is accessible to all. Her practice is built
-      on trust, preparation, and unwavering advocacy.
+      Jennifer Stewart is a dedicated public defense attorney committed to protecting
+      individual rights and ensuring justice remains accessible.
     </p>
 
     <p>
-      Every case is approached with care, discretion, and a deep respect for the law.
-      Clients can expect professionalism, transparency, and a defense they can rely on.
+      Every case is handled with preparation, discretion, and respect for the law.
+      Clients receive transparency, professionalism, and strong advocacy.
     </p>
   </div>
 </section>
@@ -233,11 +247,19 @@
   <div class="contact">
     <h3>Schedule a Consultation</h3>
     <p>
-      Reach out to discuss your case and understand your options.
-      Confidential and judgment-free.
+      Reach out to discuss your case. Confidential and judgment-free.
     </p>
 
-    <a href="mailto:contact@jenniferstewartlaw.com">GET IN TOUCH</a>
+    <form action="https://formspree.io/f/mnjzwvzl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Briefly describe your situation" required></textarea>
+      <button type="submit">GET IN TOUCH</button>
+    </form>
+
+    <p class="disclaimer">
+      Submitting this form does not create an attorney-client relationship.
+    </p>
   </div>
 </section>
 
