@@ -35,8 +35,8 @@ header{
     linear-gradient(rgba(11,28,45,.9),rgba(11,28,45,.9)),
     url("legalbooks.jpeg") center/cover no-repeat;
   color:white;
-  text-align:center;
   padding:6.5rem 1.5rem 5rem;
+  text-align:center;
 }
 
 header h1{
@@ -84,6 +84,8 @@ nav{
   font-size:.95rem;
 }
 
+.nav-links a:hover{color:var(--gold)}
+
 .resources-btn{
   background:var(--gold);
   color:var(--navy-dark);
@@ -92,13 +94,16 @@ nav{
   font-weight:600;
   letter-spacing:.15em;
   text-decoration:none;
+  transition:transform .2s ease;
 }
 
-/* ===== SECTION BASE ===== */
+.resources-btn:hover{transform:scale(1.05)}
+
+/* ===== SECTIONS ===== */
 section{
   max-width:1150px;
   margin:0 auto;
-  padding:4.5rem 1.5rem;
+  padding:2.5rem 1.5rem;
 }
 
 section h2{
@@ -117,11 +122,7 @@ section h2{
   margin:0 auto 3rem;
 }
 
-/* ===== PRACTICES (SPACING FIX) ===== */
-#practices{
-  padding-bottom:1.5rem;
-}
-
+/* ===== PRACTICES ===== */
 .practice-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -134,13 +135,15 @@ section h2{
   border-radius:26px;
   text-align:center;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
+  transition:transform .3s ease, box-shadow .3s ease;
 }
 
-/* ===== ABOUT (SPACING FIX) ===== */
-#about{
-  padding-top:1.5rem;
+.practice-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 55px rgba(0,0,0,.12);
 }
 
+/* ===== ABOUT ===== */
 .about-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -152,9 +155,61 @@ section h2{
   padding:3.2rem;
   border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
-  font-size:1.25rem;
-  color:var(--soft);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.about-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 55px rgba(0,0,0,.12);
+}
+
+.about-summary{text-align:center}
+
+.about-photo img{
+  width:140px;
+  border-radius:12px;
+  border:none;
+  box-shadow:none;
+}
+
+.read-more-btn{
+  margin-top:1.5rem;
+  padding:.8rem 2rem;
+  border:none;
+  border-radius:999px;
+  background:var(--gold);
+  color:var(--navy-dark);
+  font-weight:600;
+  letter-spacing:.15em;
+  cursor:pointer;
+  transition:transform .2s ease;
+}
+
+.read-more-btn:hover{transform:scale(1.05)}
+
+.about-card.centered{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
   text-align:center;
+}
+
+/* ===== FULL BIO ===== */
+.full-bio{
+  display:none;
+  margin-top:3rem;
+  padding-top:3rem;
+  border-top:2px solid #e0e0e0;
+}
+
+.full-bio.show{display:block}
+
+.bio-card{
+  background:var(--card);
+  padding:3.2rem;
+  border-radius:26px;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  color:var(--soft);
 }
 
 /* ===== RESOURCES ===== */
@@ -185,10 +240,12 @@ section h2{
   background:var(--navy);
   color:white;
   text-decoration:none;
-  font-size:.95rem;
-  letter-spacing:.15em;
   font-weight:600;
+  letter-spacing:.15em;
+  transition:transform .2s ease;
 }
+
+.resource-card a:hover{transform:scale(1.05)}
 
 /* ===== CONTACT ===== */
 .contact-box{
@@ -213,7 +270,7 @@ input,textarea{
   font-size:1rem;
 }
 
-button{
+button[type="submit"]{
   margin-top:1.5rem;
   padding:1.1rem 3rem;
   border:none;
@@ -223,7 +280,10 @@ button{
   font-weight:600;
   letter-spacing:.15em;
   cursor:pointer;
+  transition:transform .2s ease;
 }
+
+button[type="submit"]:hover{transform:scale(1.05)}
 
 .form-success{
   display:none;
@@ -232,7 +292,6 @@ button{
   color:var(--navy);
 }
 
-/* ===== FOOTER ===== */
 footer{
   text-align:center;
   padding:2.5rem 1rem;
@@ -262,7 +321,6 @@ footer{
 <section id="practices">
   <h2>PRACTICES</h2>
   <p class="section-sub">Focused, ethical legal representation.</p>
-
   <div class="practice-grid">
     <div class="practice-card"><h3>Criminal Defense</h3><p>Misdemeanor and felony representation.</p></div>
     <div class="practice-card"><h3>Public Defense</h3><p>Protecting constitutional rights.</p></div>
@@ -275,8 +333,28 @@ footer{
   <p class="section-sub">Professional, compassionate advocacy.</p>
 
   <div class="about-grid">
-    <div class="about-card">Jennifer Stewart is a public defense attorney dedicated to justice, dignity, and equitable legal representation.</div>
-    <div class="about-card">Every case is approached with preparation, discretion, and respect for the people involved.</div>
+    <div class="about-card about-summary">
+      <div class="about-photo">
+        <img src="jennifer-stewart.jpg" alt="Jennifer Stewart">
+      </div>
+      <h3>Jennifer Stewart</h3>
+      <p>Public defense attorney with more than 21 years of experience.</p>
+      <button class="read-more-btn" onclick="toggleBio()">READ FULL BIO</button>
+    </div>
+
+    <div class="about-card centered">
+      <p>Every case is approached with preparation, discretion, and respect.</p>
+      <h3>Commitment to Justice</h3>
+      <p><strong>21+ Years • 5,000+ Cases</strong></p>
+    </div>
+  </div>
+
+  <div id="fullBio" class="full-bio">
+    <div class="bio-card">
+      <p>Jennifer Stewart was born in Puyallup, Washington, and spent much of her early life in Thurston and Lewis Counties. As a single mother in the early 1990s, she began her academic journey at Centralia Community College and ultimately earned her Associate of Arts degree.</p>
+      <p>She later attended the University of Washington, earning a Bachelor of Science degree in Speech and Hearing Sciences while working as a law clerk. Jennifer pursued licensure through the Washington State Bar Association's Rule Six Law Clerk Program and served as a Rule Nine Legal Intern in multiple jurisdictions.</p>
+      <p>After passing the Washington State Bar Exam on her first attempt in 2006, she was admitted as an attorney in 2007. Since then, she has represented thousands of clients across Washington State and is recognized as a tenacious, highly prepared, and fearless trial advocate.</p>
+    </div>
   </div>
 </section>
 
@@ -322,11 +400,13 @@ footer{
   </div>
 </section>
 
-<footer>
-© 2026 Jennifer Stewart Law — All Rights Reserved
-</footer>
+<footer>© 2026 Jennifer Stewart Law — All Rights Reserved</footer>
 
 <script>
+function toggleBio(){
+  document.getElementById("fullBio").classList.toggle("show");
+}
+
 function handleSubmit(){
   setTimeout(() => {
     document.querySelector("form").style.display = "none";
